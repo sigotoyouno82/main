@@ -16,18 +16,18 @@ key_name               = aws_key_pair.my_key_pair.key_name
   }
 }
 
-resource "aws_instance" "AppSV_01" {
-  ami           = var.ami_id
-  instance_type = var.instance_type
-  subnet_id     = aws_subnet.public_subnet_1.id
-  vpc_security_group_ids = [
-    aws_security_group.allow_http_https.id,
-    aws_security_group.allow_ssh.id # セキュリティグループIDを指定
-    ]  
-  associate_public_ip_address = true
-  private_ip             = "10.0.1.11" # プライベートIPアドレスを指定
+#resource "aws_instance" "AppSV_01" {
+  #ami           = var.ami_id
+  #instance_type = var.instance_type
+  #subnet_id     = aws_subnet.public_subnet_1.id
+  #vpc_security_group_ids = [
+   # aws_security_group.allow_http_https.id,
+  #  aws_security_group.allow_ssh.id # セキュリティグループIDを指定
+  #  ]  
+  #associate_public_ip_address = true
+ # private_ip             = "10.0.1.11" # プライベートIPアドレスを指定
 
-key_name               = aws_key_pair.my_key_pair.key_name
+#key_name               = aws_key_pair.my_key_pair.key_name
 
   tags = {
     Name = "public-subnet-1-instance-2"
