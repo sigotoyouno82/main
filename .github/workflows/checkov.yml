@@ -10,7 +10,7 @@ on:
 
 jobs:
   checkov:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04  # ubuntu-22.04を明示的に指定
 
     steps:
       # リポジトリをクローン
