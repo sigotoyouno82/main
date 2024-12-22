@@ -33,3 +33,5 @@ jobs:
       - name: Run Checkov
         run: |
           checkov -d ./terraform/  # 対象ディレクトリを指定
+
+      #コメント追加
